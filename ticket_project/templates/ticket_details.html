@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="container">
+    <h2>📄 Processed Ticket Details</h2>
+
+    <p><b>📛 Name:</b> {{ ticket[1] }}</p>
+    <p><b>📱 Contact:</b> {{ ticket[2] }}</p>
+    <p><b>🆔 Ticket ID:</b> {{ ticket[0] }}</p>
+    <p><b>📝 Cleaned Ticket:</b> {{ ticket[3] }}</p>
+    <p><b>🏷 Category:</b> {{ ticket[4] }}</p>
+    <p><b>📅 Year:</b> {{ year }}</p>
+    <p><b>📆 Month:</b> {{ month }}</p>
+    <p><b>📌 Weekday:</b> {{ weekday }}</p>
+    <p><b>⚡ Priority:</b> {{ ticket[6] }}</p>
+    <p><b>😊 Sentiment:</b> {{ ticket[7] }}</p>
+    <p><b>💡 Solution:</b> {{ ticket[8] if ticket[8] else "Not added yet" }}</p>
+
+    <p><a href="/tickets">🔙 View All Tickets</a></p>
+</div>
+</body>
+</html>

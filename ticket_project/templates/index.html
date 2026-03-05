@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Support Ticket System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="container">
+    <h2>🎫 Customer Support Ticket System</h2>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Enter Your Name" required>
+        <input type="text" name="contact" placeholder="Enter Contact Number" required>
+        <textarea name="ticket" placeholder="Enter your ticket message" required></textarea>
+
+        <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="Technical Issue">Technical Issue</option>
+            <option value="Billing / Payment">Billing / Payment</option>
+            <option value="Product / Order Issue">Product / Order Issue</option>
+            <option value="Service Request">Service Request</option>
+            <option value="Feedback / Suggestion">Feedback / Suggestion</option>
+            <option value="Account / Login Issue">Account / Login Issue</option>
+        </select>
+
+        <input type="date" name="date" required>
+        <button type="submit">✨ Process Ticket</button>
+    </form>
+</div>
+</body>
+</html>

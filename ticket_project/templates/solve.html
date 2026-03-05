@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solve Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>🛠 Solve Ticket {{ ticket[0] }}</h2>
+    <p><b>Message:</b> {{ ticket[3] }}</p>
+    <form method="POST">
+        <textarea name="solution" placeholder="Enter solution here" required></textarea>
+        <button type="submit">Add Solution</button>
+    </form>
+</div>
+</body>
+</html>
